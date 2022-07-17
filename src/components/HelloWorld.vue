@@ -25,10 +25,10 @@ export default {
   },
   methods: {
     changeBtn() {
-      let getBody = document.body.style
+      let getBody = document.getElementById('app').style
       if (this.pageChange == '放大页面') {
         // Firefox
-        if (navigator.userAgent.indexOf('Chrome') > 0) {
+        if (navigator.userAgent.indexOf('Firefox') > 0) {
           this.scal = (parseFloat(this.scal) + 0.5).toFixed(2)
           getBody.transform = `scale(${this.scal})`
           getBody.transformOrigin = 'center top'
@@ -38,7 +38,7 @@ export default {
         this.pageChange = '正常页面'
       } else {
         // Firefox
-        if (navigator.userAgent.indexOf('Chrome') > 0) {
+        if (navigator.userAgent.indexOf('Firefox') > 0) {
           this.scal = (parseFloat(this.scal) - 0.5).toFixed(2)
           getBody.transform = `scale(${this.scal})`
           getBody.transformOrigin = '0.0'

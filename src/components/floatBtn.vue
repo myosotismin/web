@@ -10,6 +10,9 @@ export default {
   },
   created() {},
   computed: {},
+  mounted() {
+    document.body.insertBefore(this.$el, document.body.firstChild)
+  },
   methods: {},
 }
 </script>
